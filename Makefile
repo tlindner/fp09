@@ -21,7 +21,7 @@ LIBRARY = fp09_rom.o fp09_FADD.o fp09_BINDEC.o fp09_DECBIN.o fp09_FAB.o fp09_FCM
 	fp09_FFLTD.o fp09_FINT.o fp09_FMOV.o fp09_FMUL.o fp09_FNEG.o fp09_FREM.o \
 	fp09_FSUB.o fp09_FSQRT.o
 
-%.o: %.as
+%.o: %.asm
 	$(ASM) $(AFLAGS) $< $(ASOUT)$@
 
 libfp09.a: $(LIBRARY)
