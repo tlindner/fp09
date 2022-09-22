@@ -3,7 +3,7 @@
 * Floating-Point ROM for the MC6809
 * © 1982 Motorola
 *
-* C header compiled by tim lindner
+* C header created by tim lindner
 * <tlindner@macmess.org>
 *
 * December 2020
@@ -101,28 +101,28 @@ void fp09_FSUB( fp09_FPCB *cb, fp09_float arg2, fp09_float arg1, fp09_float resu
 void fp09_FSQRT( fp09_FPCB *cb, fp09_float arg2, fp09_float result );
 
 // Compare Parameter word
-#define fp09_cmp_not_equal     1<<12
-#define fp09_cmp_greater_than  1<<11
-#define fp09_cmp_equal         1<<10
-#define fp09_cmp_less_than     1<<9
-#define fp09_cmp_unordered     1<<8
-#define fp09_cmp_arg1_single   0
-#define fp09_cmp_arg1_double   1<<4
-#define fp09_cmp_arg1_extended 1<<5
-#define fp09_cmp_arg2_single   0
-#define fp09_cmp_arg2_double   1<<0
-#define fp09_cmp_arg2_extended 1<<1
+#define fp09_cmp_not_equal     (1<<12)
+#define fp09_cmp_greater_than  (1<<11)
+#define fp09_cmp_equal         (1<<10)
+#define fp09_cmp_less_than     (1<<9)
+#define fp09_cmp_unordered     (1<<8)
+#define fp09_cmp_arg1_single   (0)
+#define fp09_cmp_arg1_double   (1<<4)
+#define fp09_cmp_arg1_extended (1<<5)
+#define fp09_cmp_arg2_single   (0)
+#define fp09_cmp_arg2_double   (1<<0)
+#define fp09_cmp_arg2_extended (1<<1)
 
 int fp09_FCMP( fp09_FPCB *cb, fp09_float arg2, fp09_float arg1, unsigned short parameter );
 int fp09_FTCMP( fp09_FPCB *cb, fp09_float arg2, fp09_float arg1, unsigned short parameter );
 int fp09_FPCMP( fp09_FPCB *cb, fp09_float arg2, fp09_float arg1, unsigned short parameter );
 int fp09_FTPCMP( fp09_FPCB *cb, fp09_float arg2, fp09_float arg1, unsigned short parameter );
 
-#define fp09_mov_arg2_single     0
-#define fp09_mov_arg2_double     1<<4
-#define fp09_mov_arg2_extended   1<<5
-#define fp09_mov_result_single   0
-#define fp09_mov_result_double   1<<0
-#define fp09_mov_result_extended 1<<1
+#define fp09_mov_arg2_single     (0)
+#define fp09_mov_arg2_double     (1<<4)
+#define fp09_mov_arg2_extended   (1<<5)
+#define fp09_mov_result_single   (0)
+#define fp09_mov_result_double   (1<<0)
+#define fp09_mov_result_extended (1<<1)
 
 void fp09_FMOV( fp09_FPCB *cb, unsigned short parameter, fp09_float arg2, fp09_float result );
